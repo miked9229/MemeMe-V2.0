@@ -129,7 +129,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Sent Memes" id="1pw-21-AEo">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4h9-U2-IrI"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4h9-U2-IrI">
+                            <connections>
+                                <action selector="callMemeViewController:" destination="Ftb-TQ-rFT" id="ucG-O3-XbE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GDX-VT-cfo" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -222,7 +226,11 @@
                         <barButtonItem title="Item" id="UFi-51-bYa"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Sent Memes" id="Xf7-zZ-f1F">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BKS-VU-vVJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="BKS-VU-vVJ">
+                            <connections>
+                                <action selector="callMemeCreatorViewController:" destination="rbH-uL-kja" id="g3t-ZM-2BI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUo-Vf-hfU" userLabel="First Responder" sceneMemberID="firstResponder"/>

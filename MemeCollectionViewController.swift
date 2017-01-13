@@ -24,6 +24,14 @@ class MemeCollectionViewController: UICollectionViewController {
 
 
     // MARK: UICollectionViewDataSource
+    @IBAction func callMemeCreatorViewController(_ sender: Any) {
+    
+    let memeViewController = storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController")
+        
+    present(memeViewController, animated: true, completion: nil)
+    
+    
+    }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

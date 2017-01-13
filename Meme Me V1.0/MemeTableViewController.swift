@@ -22,13 +22,15 @@ class MemeTableViewController: UITableViewController {
         memes = appDelegate.memes
         // Do any additional setup after loading the view.
     }
-    @IBAction func callMemeViewController(_ sender: Any) {
-    let memeViewController = storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController")
-            
-    present(memeViewController, animated: true, completion: nil)
-            
-        }
+
     
+    @IBAction func callMemeViewController(_ sender: Any) {
+    
+        let memeViewController = storyboard!.instantiateViewController(withIdentifier: "MemeEditorViewController")
+        
+        present(memeViewController, animated: true, completion: nil)
+    
+    }
     
     
     
