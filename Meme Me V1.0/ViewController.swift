@@ -142,7 +142,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
      
     }
-
+    
     func getKeyboardHeight(notification: Notification) -> CGFloat {
         /* This function returns the height of the keyboard and it is called in the 
         above methods keyboardWillShow() and keyboardWillHide() */
