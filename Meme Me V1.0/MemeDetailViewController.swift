@@ -10,12 +10,22 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+ 
+    @IBOutlet weak var topLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var bottomLabel: UILabel!
+    
+    var chosenMeme:Meme!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+    
+   //topLabel.text = chosenMeme.topText
+   //bottomLabel.text = chosenMeme.bottomText
+   imageView.image = chosenMeme.memedImage
+   imageView.contentMode = .scaleAspectFit
+        
     }
-
 
     
 
