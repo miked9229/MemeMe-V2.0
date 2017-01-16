@@ -18,18 +18,12 @@ class MemeCollectionViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
         collectionView?.reloadData()
     }
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
-
-    }
-
 
 
     // MARK: UICollectionViewDataSource
@@ -75,6 +69,13 @@ class MemeCollectionViewController: UICollectionViewController {
             
         
     
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let meme =  memes[(indexPath as NSIndexPath).row]
+        let memedetailviewcontroller = storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        memedetailviewcontroller.chosenMeme = meme
+        navigationController?.pushViewController(memedetailviewcontroller, animated: true)
     }
 
 

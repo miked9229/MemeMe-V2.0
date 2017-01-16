@@ -16,21 +16,12 @@ class MemeTableViewController: UITableViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-    
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
         tableView?.reloadData()
     }
     
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        memes = appDelegate.memes
-        
-    }
-
     
     @IBAction func callMemeViewController(_ sender: Any) {
     
@@ -50,7 +41,6 @@ class MemeTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("This tableViewMethod method is called")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")!
         let meme = memes[(indexPath as NSIndexPath).row]

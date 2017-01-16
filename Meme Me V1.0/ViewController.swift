@@ -23,9 +23,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
       dismiss(animated: true, completion: nil)
         
-        let TabBarViewController = storyboard!.instantiateViewController(withIdentifier: "TabBarController")
+        let tableViewController = storyboard!.instantiateViewController(withIdentifier: "MemeTableViewController")
         
-        present(TabBarViewController, animated: true, completion: nil)
+        present(tableViewController, animated: true, completion: nil)
     
     }
     
