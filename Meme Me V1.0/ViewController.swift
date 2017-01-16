@@ -20,6 +20,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     @IBOutlet weak var shareButton: UIBarButtonItem!
     
     @IBAction func InstantiateTabBarController(_ sender: Any) {
+        
+      dismiss(animated: true, completion: nil)
+        
         let TabBarViewController = storyboard!.instantiateViewController(withIdentifier: "TabBarController")
         
         present(TabBarViewController, animated: true, completion: nil)
@@ -95,7 +98,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         present(sharedActivityViewController, animated: true, completion: nil)
         
       sharedActivityViewController.completionWithItemsHandler = { (activity: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?)
-        /* this a completionWithItemsHandler closure and calls the save() method */
         in
         
             self.save()

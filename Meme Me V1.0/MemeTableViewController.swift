@@ -13,14 +13,22 @@ import Foundation
 class MemeTableViewController: UITableViewController {
 
     var memes: [Meme]!
-    
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    
+        tableView?.reloadData()
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         memes = appDelegate.memes
-        // Do any additional setup after loading the view.
+        
     }
 
     
@@ -42,6 +50,7 @@ class MemeTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        print("This tableViewMethod method is called")
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")!
         let meme = memes[(indexPath as NSIndexPath).row]

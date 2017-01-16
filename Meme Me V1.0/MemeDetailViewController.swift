@@ -18,7 +18,6 @@ class MemeDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-    
 
    imageView.image = chosenMeme.memedImage
    imageView.contentMode = .scaleAspectFit

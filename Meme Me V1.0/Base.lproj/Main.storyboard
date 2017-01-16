@@ -58,15 +58,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TeJ-ES-BSJ">
-                                <rect key="frame" x="49" y="44" width="280" height="426"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="TeJ-ES-BSJ" secondAttribute="trailing" constant="30" id="BQQ-4w-FtC"/>
-                            <constraint firstItem="TeJ-ES-BSJ" firstAttribute="leading" secondItem="IBQ-kL-lRz" secondAttribute="leadingMargin" constant="33" id="KlE-P4-BpH"/>
-                            <constraint firstItem="TeJ-ES-BSJ" firstAttribute="top" secondItem="qfm-nc-bPM" secondAttribute="bottom" constant="24" id="NrX-HT-sYX"/>
-                            <constraint firstItem="HDm-67-Em1" firstAttribute="top" secondItem="TeJ-ES-BSJ" secondAttribute="bottom" constant="197" id="aEe-ht-eoK"/>
+                            <constraint firstItem="HDm-67-Em1" firstAttribute="top" secondItem="TeJ-ES-BSJ" secondAttribute="bottom" id="Qr3-lI-KQu"/>
+                            <constraint firstItem="TeJ-ES-BSJ" firstAttribute="top" secondItem="IBQ-kL-lRz" secondAttribute="top" id="SkD-rI-dsv"/>
+                            <constraint firstItem="TeJ-ES-BSJ" firstAttribute="leading" secondItem="IBQ-kL-lRz" secondAttribute="leading" id="eUS-T5-q2i"/>
+                            <constraint firstAttribute="trailing" secondItem="TeJ-ES-BSJ" secondAttribute="trailing" id="yc2-nQ-UAD"/>
                         </constraints>
                     </view>
                     <connections>
